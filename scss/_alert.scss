@@ -3,18 +3,23 @@
 //
 
 .alert {
-  padding: $alert-padding;
+  padding: calc(#{$alert-padding} - #{$alert-border-width}) $alert-padding;
   margin-bottom: $spacer-y;
   border: $alert-border-width solid transparent;
   @include border-radius($alert-border-radius);
 
   // Improve alignment and spacing of inner content
-  > p,
-  > ul {
-    margin-bottom: 0;
+  > * {
+    margin: 0;
   }
-  > p + p {
-    margin-top: 5px;
+  > * + * {
+    margin-top: rhythm(0.5);
+  }
+  // Quantity query: selects all siblings of the first child,
+  // only when there is an odd number of children
+  > :nth-last-child(odd):first-child ~ * {
+    // add 1/4 to keep rhythm !
+    margin-top: rhythm(0.5 + 0.25);
   }
 }
 
@@ -35,7 +40,7 @@
 // Expand the right padding and account for the close button's positioning.
 
 .alert-dismissible {
-  padding-right: ($alert-padding + 20px);
+  padding-right: calc(#{$alert-padding} + 20px);
 
   // Adjust close link position
   .close {

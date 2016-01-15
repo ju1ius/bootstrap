@@ -104,7 +104,7 @@ body {
 // margin for easier control within type scales as it avoids margin collapsing.
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: .5rem;
+  margin-bottom: rhythm(1);
 }
 
 // Reset margins on paragraphs
@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5, h6 {
 // bottom margin to use `rem` units instead of `em`.
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: rhythm(1);
 }
 
 // Abbreviations and acronyms
@@ -125,7 +125,7 @@ abbr[data-original-title] {
 }
 
 address {
-  margin-bottom: 1rem;
+  margin-bottom: rhythm(1);
   font-style: normal;
   line-height: inherit;
 }
@@ -134,7 +134,7 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: rhythm(1);
 }
 
 ol ol,
@@ -149,12 +149,12 @@ dt {
 }
 
 dd {
-  margin-bottom: .5rem;
+  margin-bottom: rhythm(1);
   margin-left: 0; // Undo browser default
 }
 
 blockquote {
-  margin: 0 0 1rem;
+  margin: 0 0 rhythm(1);
 }
 
 
@@ -185,7 +185,7 @@ pre {
   // Remove browser default top margin
   margin-top: 0;
   // Reset browser default of `1em` to use `rem`s
-  margin-bottom: 1rem;
+  margin-bottom: rhythm(1);
 }
 
 
@@ -196,7 +196,7 @@ pre {
 figure {
   // Normalize adds `margin` to `figure`s as browsers apply it inconsistently.
   // We reset that to create a better flow in-page.
-  margin: 0 0 1rem;
+  margin: 0 0 rhythm(1);
 }
 
 
@@ -277,7 +277,7 @@ th {
 label {
   // Allow labels to use `margin` for spacing.
   display: inline-block;
-  margin-bottom: .5rem;
+  margin-bottom: rhythm(0.5);
 }
 
 // Work around a Firefox/IE bug where the transparent `button` background
@@ -324,9 +324,8 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: .5rem;
-  font-size: 1.5rem;
-  line-height: inherit;
+  margin-bottom: rhythm(1);
+  @include font-size(1.5);
 //  border: 0;
 }
 

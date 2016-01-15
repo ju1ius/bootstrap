@@ -7,7 +7,7 @@
   width: 100%;
   // // Make inputs at least the height of their button counterpart (base line-height + padding + border)
   // height: $input-height;
-  padding: $input-padding-y $input-padding-x;
+  padding: calc(#{$input-padding-y} - #{$input-btn-border-width}) $input-padding-x;
   font-size: $font-size-base;
   line-height: $line-height;
   color: $input-color;
@@ -181,7 +181,7 @@ input[type="month"] {
   position: relative;
   display: block;
   // margin-top:    ($spacer * .75);
-  margin-bottom: ($spacer * .75);
+  margin-bottom: $spacer;
 
   label {
     padding-left: 1.25rem;

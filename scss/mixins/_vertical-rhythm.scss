@@ -1,0 +1,16 @@
+@function rhythm ($lines: 1, $line-height: $line-height) {
+    //@debug 'Rhythm: #{$lines}, #{$line-height}';
+    @return ($lines * $line-height) * 1rem;
+}
+
+@mixin font-size ($ratio, $lines: 0) {
+    @if (not unitless($ratio)) {
+        @if (unit($ratio) == 'rem') {
+            $ratio: $ratio / ($ratio * 0 + 1);
+        } @else {
+            @error 'font-size must be either unitless or in rems';
+        }
+    }
+    font-size: $ratio * 1rem;
+    line-height: if($lines > 0, rhythm($lines), rhythm(ceil($ratio / $line-height)));
+}

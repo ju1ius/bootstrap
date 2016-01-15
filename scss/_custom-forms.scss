@@ -12,11 +12,11 @@
 .custom-control {
   position: relative;
   display: inline;
-  padding-left: 1.5rem;
+  padding-left: rhythm(1);
   color: #555;
 
   + .custom-control {
-    margin-left: 1rem;
+    margin-left: rhythm(1);
   }
 }
 
@@ -190,7 +190,8 @@
   position: relative;
   display: inline-block;
   max-width: 100%;
-  height: 2.5rem;
+  height: rhythm(2);
+  margin-bottom: rhythm(1);
   cursor: pointer;
 }
 
@@ -212,9 +213,9 @@
   right: 0;
   left: 0;
   z-index: 5;
-  height: 2.5rem;
-  padding: .5rem 1rem;
-  line-height: 1.5;
+  height: rhythm(2);
+  padding: calc(#{rhythm(0.5)} - #{$input-btn-border-width}) 1rem;
+  line-height: $line-height;
   color: #555;
   user-select: none;
   background-color: #fff;
@@ -228,14 +229,14 @@
 
   &::before {
     position: absolute;
-    top: -.075rem;
-    right: -.075rem;
-    bottom: -.075rem;
+    top: -$input-btn-border-width;
+    right: -$input-btn-border-width;
+    bottom: -$input-btn-border-width;
     z-index: 6;
     display: block;
-    height: 2.5rem;
-    padding: .5rem 1rem;
-    line-height: 1.5;
+    height: rhythm(2);
+    padding: calc(#{rhythm(0.5)} - #{$input-btn-border-width}) 1rem;
+    line-height: $line-height;
     color: #555;
     content: "Browse";
     background-color: #eee;

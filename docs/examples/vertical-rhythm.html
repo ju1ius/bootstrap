@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap 4 vertical rhythm P.O.C.</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../../dist/css/bootstrap.css">
+    <style>
+    body.show-grid {
+        background: url(http://basehold.it/i/24);
+    }
+    </style>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var toggler = document.getElementById('grid-toggler');
+        toggler.addEventListener('click', function (e) {
+            document.body.classList.toggle('show-grid');
+        });
+    });
+    </script>
+</head>
+<body class="show-grid">
+
+<div class="container p-t-2">
+
+    <div class="row">
+
+        <div class="col-sm-4 col-sm-push-8">
+            <h2>Sidebar</h2>
+            <div class="m-b-1h">
+                <small>
+                    Buttons have <code>padding: rhythm(1/4) 0;</code>,
+                    so this div compensates with <code>.m-b-1h</code>
+                </small>
+                <br>
+                <button id="grid-toggler" class="btn btn-primary">
+                    TOGGLE BASELINE GRID
+                </button>
+            </div>
+            <b>List with .m-b-1</b>
+            <ul class="list-unstyled m-b-1">
+                <li>Item n°1</li>
+                <li>Item n°2</li>
+                <li>Item n°3</li>
+                <li>Item n°4</li>
+            </ul>
+            <b>List with m-b-2</b>
+            <ul class="list-unstyled m-b-2">
+                <li>Item n°1</li>
+                <li>Item n°2</li>
+                <li>Item n°3</li>
+                <li>Item n°4</li>
+            </ul>
+            <b>Another list</b>
+            <ul class="list-unstyled">
+                <li>Item n°1</li>
+                <li>Item n°2</li>
+                <li>Item n°3</li>
+                <li>Item n°4</li>
+            </ul>
+        </div>
+
+        <div class="col-sm-8 col-sm-pull-4">
+
+            <h1>Bootstrap 4 with Vertical Rhythm</h1>
+
+            <div class="jumbotron">
+                <p class="lead">
+                    This is a <code>.lead</code> paragraph.
+                    <br>
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis eges<sup>tas</sup>.
+                </p>
+                <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas. Aenean ultri<sub>cies</sub> mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.<code>Vestibulum erat wisi</code>, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
+            </div>
+            <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <strong>commodo vitae</strong>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+            <h2>Heading Level 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida.</p>
+            <ol>
+                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                <li>Aliquam tincidunt mauris eu risus.</li>
+            </ol>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida.</p>
+            <blockquote class="blockquote">
+                <p>
+                    <b>Blockquote > p</b>.
+                    <br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida.
+                </p>
+                <p>Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
+                <p class="blockquote-footer">
+                    <cite>Blockquote footer cite</cite>
+                </p>
+            </blockquote>
+
+            <h3>Heading Level 3</h3>
+            <div class="alert alert-warning">
+                <p>
+                    <strong>Warning ! Do NOT break vertical rhythm !</strong>
+                </p>
+                <ul>
+                    <li>Warning n° 1</li>
+                    <li>Warning n° 2</li>
+                    <li>Warning n° 3</li>
+                </ul>
+            </div>
+            <div class="alert alert-success" id="alert-children-test">
+                <p>Calm down, BS4 got your back.</p>
+                <p>Even with multiple children</p>
+                <p>And even with an odd number of children!</p>
+            </div>
+            <div class="btn-group m-b-1h">
+                <div class="btn btn-success" id="alert-child-adder">Add a child</div>
+                <div class="btn btn-danger" id="alert-child-remover">Remove last child</div>
+            </div>
+            <script>
+            (function () {
+                var alert = document.getElementById('alert-children-test');
+                document.getElementById('alert-child-adder').addEventListener('click', function() {
+                    alert.insertAdjacentHTML('beforeend', "<p>I'm a new child</p>");
+                });
+                document.getElementById('alert-child-remover').addEventListener('click', function() {
+                    if (alert.childElementCount) alert.removeChild(alert.lastElementChild);
+                });
+            }());
+            </script>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida.</p>
+            <pre class="brush:css">/************************************
+ * Multiline comment
+ ************************************/
+#Heading h1 a {
+    display: block;
+    width: 300px;
+    height: 80px;
+}</pre>
+
+            <h4>Heading Level 4</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida.</p>
+
+            <h5>Heading Level 5</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
+
+            <h6>Heading Level 6</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
+
+            <h2>Okay, now onto forms!</h2>
+            <form class="m-b-2">
+                <fieldset class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="text-muted">We'll never share your email with anyone else.</small>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="exampleSelect1">Example select</label>
+                    <select class="form-control" id="exampleSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </fieldset>
+                <p class="alert alert-danger">
+                    Native multiselects, textareas & file inputs cannot respect VR because we can't control their size.
+                </p>
+                <!--
+                <fieldset class="form-group">
+                    <label for="exampleSelect2">Example multiple select</label>
+                    <select multiple class="form-control" id="exampleSelect2">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="exampleTextarea">Example textarea</label>
+                    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="exampleInputFile">File input</label>
+                    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                    <small id="fileHelp" class="text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+                </fieldset>
+                -->
+                <label class="custom-file">
+                    <input type="file" id="file" class="custom-file-input">
+                    <span class="custom-file-control"></span>
+                </label>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        Option one is this and that&mdash;be sure to include why it's great
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        Option two can be something else and selecting it will deselect option one
+                    </label>
+                </div>
+                <div class="radio disabled">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                        Option three is disabled
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Check me out
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
